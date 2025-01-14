@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaid Redirect</title>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <script>
+        // Extract query parameters from the URL
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get('token'); // Example parameter
+
+        // Redirect to your app using a deep link
+        window.location.href = `pointsking://callback?token=${token}`;
+    </script>
+</body>
+</html>
